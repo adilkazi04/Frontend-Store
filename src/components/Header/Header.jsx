@@ -7,6 +7,7 @@ import "./Header.scss";
 import Search from "./Search/Search";
 import { Context } from "../../utils/context";
 import Cart from "../Cart/Cart";
+import haya from '../../assets/hayas.png'
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -35,11 +36,11 @@ const Header = () => {
                 <div className="header-content">
                     <ul className="left">
                         <li onClick={() => navigate("/")}>Home</li>
-                        <li onClick={() => navigate("/about")}>About</li>
-                        <li>Categories</li>
+                        <li onClick={() => navigate("/about")}>Contact</li>
+                        {/* <li>Categories</li> */}
                     </ul>
                     <div className="center" onClick={() => navigate("/")}>
-                        KINGSTER
+                    <img src={haya} alt="Kingster Logo" style={{  width: "200px" }}/>
                     </div>
                     <div className="right">
                         <TbSearch onClick={() => setSearchModal(true)} />

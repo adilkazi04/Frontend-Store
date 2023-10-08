@@ -3,6 +3,8 @@ import "./Category.scss";
 
 const Category = ({ categories }) => {
     const navigate = useNavigate();
+    const imageHeight = "300px"; // Adjust this to your desired height
+
     return (
         <div className="shop-by-category">
             <div className="categories">
@@ -17,6 +19,7 @@ const Category = ({ categories }) => {
                                 process.env.REACT_APP_STRIPE_APP_DEV_URL +
                                 item.attributes.img.data.attributes.url
                             }
+                            style={{ height: imageHeight }} // Set inline height here
                         />
                     </div>
                 ))}

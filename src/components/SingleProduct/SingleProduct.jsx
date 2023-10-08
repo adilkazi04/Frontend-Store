@@ -31,7 +31,7 @@ const SingleProduct = () => {
 
     if (!data) return;
     const product = data?.data?.[0]?.attributes;
-
+    const imageHeight = "600px";
     return (
         <div className="single-product-main-content">
             <div className="layout">
@@ -42,6 +42,7 @@ const SingleProduct = () => {
                                 process.env.REACT_APP_STRIPE_APP_DEV_URL +
                                 product.img.data[0].attributes.url
                             }
+                            style={{ height: imageHeight }} 
                         />
                     </div>
                     <div className="right">
